@@ -1,0 +1,13 @@
+--- em_utility.c	2014-04-27 14:42:23.000000000 +0800
++++ em_utility.c.new	2014-04-29 10:25:41.000000000 +0800
+@@ -431,6 +431,10 @@
+     if (strcmp(property_str, "win2_xy") == 0)           return ID_WIN2_XY;
+     if (strcmp(property_str, "win2_dim") == 0)          return ID_WIN2_DIM;
+     if (strcmp(property_str, "cas_scl_ratio") == 0)     return ID_CAS_SCL_RATIO;
++
++    if (strcmp(property_str, "direct") == 0)            return ID_DEC_DIRECT;    
++    if (strcmp(property_str, "gop_size") == 0)          return ID_DEC_GOP;    
++
+     if (strcmp(property_str, "au_frame_samples") == 0)  return ID_AU_FRAME_SAMPLES;
+     if (strcmp(property_str, "buf_clean") == 0)         return ID_BUF_CLEAN;
+     return 0;

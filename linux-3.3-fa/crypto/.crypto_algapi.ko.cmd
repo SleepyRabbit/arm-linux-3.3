@@ -1,0 +1,1 @@
+cmd_crypto/crypto_algapi.ko := /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL -r  -T /media/psf/Home/Documents/projects/camera/GM8136/arm-linux-3.3/linux-3.3-fa/scripts/module-common.lds --build-id  -o crypto/crypto_algapi.ko crypto/crypto_algapi.o crypto/crypto_algapi.mod.o

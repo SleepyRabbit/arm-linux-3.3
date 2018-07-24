@@ -1,0 +1,76 @@
+#ifndef _PLATFORM_H_
+#define _PLATFORM_H_
+
+#define FTMCP300_PLT_STR_A369 "A369"
+#define FTMCP300_PLT_STR_8287 "828X"
+#define FTMCP300_PLT_STR_8210 "8210"
+
+
+#ifdef A369
+#define FTMCP300_CHIP_VER_VAL  0x0000  /* define FTMCP300_CHIP_VER_VAL, FTMCP300_CHIP_VER_VAL to 0 to skip chip version checking */
+#define FTMCP300_CHIP_VER_MASK 0x0000
+#define FTMCP300_PLT_STR       FTMCP300_PLT_STR_A369
+#define FTMCP300_NUM 1
+#define FTMCP300_DEC0_BASE_ADDRESS         0xC0000000 
+#define FTMCP300_DEC0_BASE_ADDRESS_SIZE    0x00100000 
+#define FTMCP300_DEC0_VCACHE_ADDRESS       0xC0080000
+#define FTMCP300_DEC0_VCACHE_ADDRESS_SIZE  0x00100000
+#define FTMCP300_DEC0_IRQ                  PLATFORM_EXTAHB_IRQ      //13
+#endif
+
+#ifdef GMXXXX /* an example of adding new platform of one mcp300 engine */
+#define FTMCP300_CHIP_VER_VAL  0x0000  /* define FTMCP300_CHIP_VER_VAL, FTMCP300_CHIP_VER_VAL to 0 to skip chip version checking */
+#define FTMCP300_CHIP_VER_MASK 0x0000
+#define FTMCP300_PLT_STR       "XXXX"
+#define FTMCP300_NUM 1
+#define FTMCP300_DEC0_BASE_ADDRESS         H264D_FTMCP300_0_PA_BASE //0x94200000
+#define FTMCP300_DEC0_BASE_ADDRESS_SIZE    H264D_FTMCP300_0_PA_SIZE //0x00100000
+#define FTMCP300_DEC0_VCACHE_ADDRESS       0x94300000
+#define FTMCP300_DEC0_VCACHE_ADDRESS_SIZE  0x00100000
+#define FTMCP300_DEC0_IRQ                  H264D_FTMCP300_0_IRQ     //??
+#warning need to confirm the base address of mcp300/vcache and IRQ number. then remove this line
+#endif
+
+#ifdef GM8287
+#define FTMCP300_CHIP_VER_VAL  0x8280
+#define FTMCP300_CHIP_VER_MASK 0xFFF0
+#define FTMCP300_PLT_STR       FTMCP300_PLT_STR_8287
+#define FTMCP300_NUM 1
+#define FTMCP300_DEC0_BASE_ADDRESS         H264D_FTMCP300_0_PA_BASE //0x94200000
+#define FTMCP300_DEC0_BASE_ADDRESS_SIZE    H264D_FTMCP300_0_PA_SIZE //0x00100000
+#define FTMCP300_DEC0_VCACHE_ADDRESS       0x94300000
+#define FTMCP300_DEC0_VCACHE_ADDRESS_SIZE  0x00100000
+#define FTMCP300_DEC0_IRQ                  H264D_FTMCP300_0_IRQ     //30
+#endif
+
+#ifdef GM8210
+#define FTMCP300_CHIP_VER_VAL  0x8210
+#define FTMCP300_CHIP_VER_MASK 0xFFFF
+#define FTMCP300_PLT_STR       FTMCP300_PLT_STR_8210
+#define FTMCP300_NUM 2
+#define FTMCP300_DEC0_BASE_ADDRESS         H264D_FTMCP300_0_PA_BASE //0x94200000
+#define FTMCP300_DEC0_BASE_ADDRESS_SIZE    H264D_FTMCP300_0_PA_SIZE //0x00100000
+#define FTMCP300_DEC0_VCACHE_ADDRESS       0x94300000
+#define FTMCP300_DEC0_VCACHE_ADDRESS_SIZE  0x00100000
+#define FTMCP300_DEC0_IRQ                  H264D_FTMCP300_0_IRQ     //30
+
+#define FTMCP300_DEC1_BASE_ADDRESS         H264D_FTMCP300_1_PA_BASE //0x94000000
+#define FTMCP300_DEC1_BASE_ADDRESS_SIZE    H264D_FTMCP300_1_PA_SIZE //0x00100000
+#define FTMCP300_DEC1_VCACHE_ADDRESS       0x94100000
+#define FTMCP300_DEC1_VCACHE_ADDRESS_SIZE  0x00100000
+#define FTMCP300_DEC1_IRQ                  H264D_FTMCP300_1_IRQ     //40
+#endif
+
+int pf_mcp300_clk_on(void);
+int pf_mcp300_clk_off(void);
+int pf_mcp300_clk_exit(void);
+
+extern unsigned long favcd_base_address_pa[FTMCP300_NUM];
+extern unsigned long favcd_base_address_size[FTMCP300_NUM];
+extern unsigned long favcd_vcache_address_pa[FTMCP300_NUM];
+extern unsigned long favcd_vcache_address_size[FTMCP300_NUM];
+extern int irq_no[FTMCP300_NUM];
+extern const char irq_name[FTMCP300_NUM][20];
+
+#endif /* _PLATFORM_H_ */
+

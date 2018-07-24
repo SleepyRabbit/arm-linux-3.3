@@ -1,0 +1,33 @@
+rm AACAudio.h
+rm aac_main_intfac.h
+rm cfft.h 
+rm cfft_tab.h
+rm FAAC.h
+rm GMAAC.h
+rm imdct.h
+rm mdct.h
+rm mp4ff.h
+rm mp4ffint.h
+rm mp4ff_int_types.h
+rm mp4.h
+rm oper_32b.h
+rm perceptual_cfg.h
+rm perceptual_const.h
+rm perceptual_data.h
+rm perceptual_main.h
+rm perceptual_tool.h
+rm pns.h
+rm pulse.h
+rm quantizer_data.h
+rm quantizer_main.h
+rm quantizer_tool_2.h
+rm quantizer_tool.h
+rm specrec.h
+rm threshold_tool.h
+rm syntax.h
+rm tns_func.h
+rm tns.h
+rm tns_param.h
+rm tns_tool.h
+
+

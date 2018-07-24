@@ -1,0 +1,1 @@
+cmd_kernel/power/built-in.o :=  /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL    -r -o kernel/power/built-in.o kernel/power/poweroff.o ; scripts/mod/modpost kernel/power/built-in.o

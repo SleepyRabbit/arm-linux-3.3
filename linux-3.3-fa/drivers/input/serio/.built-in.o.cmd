@@ -1,0 +1,1 @@
+cmd_drivers/input/serio/built-in.o :=  /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL    -r -o drivers/input/serio/built-in.o drivers/input/serio/serio.o drivers/input/serio/serport.o ; scripts/mod/modpost drivers/input/serio/built-in.o

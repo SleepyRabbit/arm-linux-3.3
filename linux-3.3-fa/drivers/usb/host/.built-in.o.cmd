@@ -1,0 +1,1 @@
+cmd_drivers/usb/host/built-in.o :=  /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL    -r -o drivers/usb/host/built-in.o drivers/usb/host/fotg2xx_opt.o drivers/usb/host/ehci-hcd.o ; scripts/mod/modpost drivers/usb/host/built-in.o

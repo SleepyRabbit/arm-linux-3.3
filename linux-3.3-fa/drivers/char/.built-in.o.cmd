@@ -1,0 +1,1 @@
+cmd_drivers/char/built-in.o :=  /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL    -r -o drivers/char/built-in.o drivers/char/mem.o drivers/char/random.o drivers/char/misc.o ; scripts/mod/modpost drivers/char/built-in.o

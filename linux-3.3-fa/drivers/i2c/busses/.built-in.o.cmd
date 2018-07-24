@@ -1,0 +1,1 @@
+cmd_drivers/i2c/busses/built-in.o :=  /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL    -r -o drivers/i2c/busses/built-in.o drivers/i2c/busses/i2c-ftiic010-new-intr-mode.o ; scripts/mod/modpost drivers/i2c/busses/built-in.o

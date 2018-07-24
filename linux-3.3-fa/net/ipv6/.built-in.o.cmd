@@ -1,0 +1,1 @@
+cmd_net/ipv6/built-in.o :=  /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL    -r -o net/ipv6/built-in.o net/ipv6/addrconf_core.o net/ipv6/exthdrs_core.o ; scripts/mod/modpost net/ipv6/built-in.o

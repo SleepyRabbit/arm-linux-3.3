@@ -1,0 +1,5 @@
+kernel/crypto/crypto_algapi.ko
+kernel/crypto/aes_generic.ko
+kernel/crypto/rng.ko
+kernel/crypto/krng.ko
+kernel/crypto/ansi_cprng.ko

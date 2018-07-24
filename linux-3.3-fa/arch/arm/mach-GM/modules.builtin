@@ -1,0 +1,2 @@
+kernel/arch/arm/mach-GM/ftdmac020.ko
+kernel/arch/arm/mach-GM/dma_gm.ko

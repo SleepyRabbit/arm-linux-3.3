@@ -1,0 +1,1 @@
+cmd_drivers/spi/built-in.o :=  /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL    -r -o drivers/spi/built-in.o drivers/spi/spi.o drivers/spi/ftspi020.o ; scripts/mod/modpost drivers/spi/built-in.o

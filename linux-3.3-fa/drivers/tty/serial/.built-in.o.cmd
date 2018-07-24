@@ -1,0 +1,1 @@
+cmd_drivers/tty/serial/built-in.o :=  /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL    -r -o drivers/tty/serial/built-in.o drivers/tty/serial/serial_core.o drivers/tty/serial/8250/built-in.o ; scripts/mod/modpost drivers/tty/serial/built-in.o

@@ -1,0 +1,44 @@
+#!/bin/sh
+
+#export PATH=/gm/tools:/bin:/sbin:/usr/bin:/usr/sbin:$PATH
+
+# mount root filesystem in read-write mode
+/bin/echo "Mounting root fs rw ..."
+/bin/mount -n -o remount,rw /
+
+# mount all other filesystems
+/bin/echo "Mounting other filesystems ..."
+/bin/mount -a
+
+/bin/echo "Setting hostname ..."
+/bin/hostname GM
+
+/bin/echo "Bringing up interfaces ..."
+ifup -a
+
+# mount /mnt/mtd
+/bin/echo "Mounting user's MTD partion"
+chipver=`head -1 /proc/pmu/chipver`
+chipid=`echo $chipver | cut -c 1-4`
+if [ "$chipid" == "8210" ] ; then
+    mount -t jffs2 /dev/mtdblock5 /mnt/mtd
+elif [ "$chipid" == "8282" ] ; then
+    mount -t jffs2 /dev/mtdblock3 /mnt/mtd
+elif [ "$chipid" == "8283" ] ; then
+    mount -t jffs2 /dev/mtdblock3 /mnt/mtd
+elif [ "$chipid" == "8286" ] ; then
+    mount -t jffs2 /dev/mtdblock3 /mnt/mtd
+elif [ "$chipid" == "8287" ] ; then
+    mount -t jffs2 /dev/mtdblock3 /mnt/mtd
+elif [ "$chipid" == "8137" ] ; then
+    mount -t jffs2 /dev/mtdblock3 /mnt/mtd
+elif [ "$chipid" == "8138" ] ; then
+    mount -t jffs2 /dev/mtdblock3 /mnt/mtd
+elif [ "$chipid" == "8139" ] ; then
+    mount -t jffs2 /dev/mtdblock3 /mnt/mtd
+elif [ "$chipid" == "8135" ] ; then
+    mount -t jffs2 /dev/mtdblock3 /mnt/mtd
+elif [ "$chipid" == "8136" ] ; then
+    mount -t jffs2 /dev/mtdblock3 /mnt/mtd
+fi
+sh boot.sh

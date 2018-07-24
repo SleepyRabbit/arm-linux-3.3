@@ -1,0 +1,1 @@
+cmd_drivers/dma/built-in.o :=  /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL    -r -o drivers/dma/built-in.o drivers/dma/dmaengine.o ; scripts/mod/modpost drivers/dma/built-in.o

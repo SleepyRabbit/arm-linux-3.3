@@ -1,0 +1,1 @@
+cmd_drivers/mtd/nand/built-in.o :=  /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL    -r -o drivers/mtd/nand/built-in.o drivers/mtd/nand/nand.o drivers/mtd/nand/nand_ecc.o drivers/mtd/nand/nand_ids.o drivers/mtd/nand/ftspi020_nand.o ; scripts/mod/modpost drivers/mtd/nand/built-in.o

@@ -1,0 +1,6 @@
+kernel/drivers/net/macvlan.ko
+kernel/drivers/net/mii.ko
+kernel/drivers/net/ethernet/faraday/gmac100.ko
+kernel/drivers/net/phy/libphy.ko
+kernel/drivers/net/phy/icplus.ko
+kernel/drivers/net/phy/realtek.ko

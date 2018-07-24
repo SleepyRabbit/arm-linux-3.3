@@ -1,0 +1,1 @@
+cmd_drivers/gpu/built-in.o :=  /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL    -r -o drivers/gpu/built-in.o drivers/gpu/drm/built-in.o drivers/gpu/vga/built-in.o drivers/gpu/stub/built-in.o ; scripts/mod/modpost drivers/gpu/built-in.o

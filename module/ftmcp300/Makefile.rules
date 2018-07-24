@@ -1,0 +1,46 @@
+ifeq ($(CONFIG_2592x1944_RESOLUTION),yes)
+ccflags-y+=-DRESOLUTION_2592x1944
+endif
+ifeq ($(CONFIG_1600x1200_RESOLUTION),yes)
+ccflags-y+=-DRESOLUTION_1600x1200
+endif
+ifeq ($(CONFIG_720x576_RESOLUTION),yes)
+ccflags-y+=-DRESOLUTION_720x576
+endif
+ifeq ($(CONFIG_HW_BUSY_PERFORMANCE),yes)
+ccflags-y+=-DEVALUATION_PERFORMANCE
+endif    
+
+ifeq ($(VideoGraph_Interface),yes)
+ccflags-y+=-I$(SDK_MODULE_SRC)videograph -DSUPPORT_VG_IOCTL
+endif
+
+ifeq ($(DBG_Message),yes)
+ccflags-y+=-DDBG_DUMP
+endif
+
+
+ifeq ($(CONFIG_ALLOCMEM_FROM_RAMMAP),yes)
+ccflags-y+=-DALLOCMEM_FROM_RAMMAP 
+ifeq ($(VideoGraph_Interface),yes)
+ccflags-y+=-I$(SDK_MODULE_SRC)frammap
+else
+ccflags-y+=-I$(SDK_MODULE_SRC)frammap_old
+endif
+endif
+
+ifeq ($(CONFIG_PLATFORM_FIE8150),y)
+ccflags-y+=-DFIE8150
+ccflags-y+=-DBUFFER_POOL_MANAGEMENT
+endif
+
+ifeq ($(CONFIG_EVALUATION_PERFORMANCE),yes)
+ccflags-y+=-DEVALUATION_PERFORMANCE
+endif
+
+ifeq ($(CONFIG_STREAMING_INPUT),yes)
+ccflags-y+=-DCONFIG_STREAMING
+endif
+
+#ccflags-y += -Wall -O3 -DLINUX
+

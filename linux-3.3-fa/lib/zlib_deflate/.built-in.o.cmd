@@ -1,0 +1,1 @@
+cmd_lib/zlib_deflate/built-in.o :=  /opt/gm8136/toolchain_gnueabi-4.4.0_ARMv5TE/usr/bin/arm-unknown-linux-uclibcgnueabi-ld -EL    -r -o lib/zlib_deflate/built-in.o lib/zlib_deflate/zlib_deflate.o ; scripts/mod/modpost lib/zlib_deflate/built-in.o
